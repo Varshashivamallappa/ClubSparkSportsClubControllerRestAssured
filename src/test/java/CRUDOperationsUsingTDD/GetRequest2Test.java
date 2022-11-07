@@ -1,6 +1,7 @@
 package CRUDOperationsUsingTDD;
 
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.equalTo;
 
 import org.testng.annotations.Test;
 
@@ -17,10 +18,10 @@ public class GetRequest2Test {
 		.contentType(ContentType.JSON)
 		
 		.when()
-		.get("/sportsclubs/?name=Belagavi_Club")
+		.get("/sportsclubs/name/Club62")
 		
 		.then()
-		.assertThat().statusCode(200)
+		.assertThat().statusCode(200).body("message", equalTo("success"))
 		.log().all();
 		
 

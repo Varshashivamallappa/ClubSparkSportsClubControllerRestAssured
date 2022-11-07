@@ -11,8 +11,11 @@ public class DeleteRequestTest {
 		
 		baseURI="http://localhost:8080";
 		
-		when()
-		.delete("/sportsclubs/Mysuru_Club")
+		given()
+		.contentType("application/json")
+		
+		.when()
+		.delete("/sportsclubs/heritageClub56")
 		
 		.then()
 		.assertThat().statusCode(200)

@@ -1,6 +1,7 @@
 package CRUDOperationsUsingTDD;
 
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.equalTo;
 
 import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
@@ -18,7 +19,7 @@ public class PutRequestTest {
 		object.put("id", "7");
 		object.put("address", "Vijayanagar1");
 		object.put("description", "All sports activities");
-		object.put("name", "8848765423");
+		object.put("name", "avbc");
 		object.put("leader", "ABC");
 		object.put("ranking","2");
 		
